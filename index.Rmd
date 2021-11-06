@@ -105,10 +105,7 @@ ppd <-
     quiet = TRUE
   )
 
-# Lectura de una capa raster de DEM
-bio_cr <-
-  rast(
-    "C:/Users/PC/Curso R/proyecto_final/raster/bio12_cr.tif" )
+
 
 
 # Lista ordenada de proyectos + "Todas"
@@ -216,8 +213,6 @@ renderLeaflet({
 # Conversión del objeto altitud a la clase RasterLayer
 
 
-bio_cr_rl <- raster::raster(bio_cr)
-
 # Mapa leaflet básico con capas de provincias y registros de presencia de felinos
 leaflet() %>%
   setView(lng = -84.19452,
@@ -227,11 +222,6 @@ leaflet() %>%
   addProviderTiles(providers$Esri.WorldImagery, group = "Esri World Imagery") %>%
   addProviderTiles(providers$CartoDB.Positron, group = "Carto BD")%>%
   addTiles() %>%
-  addRasterImage(
-    bio_cr_rl, 
-    group = "Isotermalidad",
-    opacity = 0.6
-  ) %>% 
 # Overlay groups
   addPolygons (
     data = registros,

@@ -1,0 +1,13 @@
+name: tablero-flexdashboard-shiny
+title: tablero-flexdashboard-shiny
+username:
+account: fran-acua
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5060174
+bundleId: 5221972
+url: https://fran-acua.shinyapps.io/tablero-flexdashboard-shiny/
+when: 1636234680.18175
+lastSyncTime: 1636234680.18175
+asMultiple: FALSE
+asStatic: FALSE
